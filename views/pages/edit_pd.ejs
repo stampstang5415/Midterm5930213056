@@ -1,0 +1,35 @@
+<% include ../partials/insert_header.ejs %>
+<% include ../partials/navbar.ejs %>
+<div class="container">
+    <br>
+    <br>
+    <form action="/db/save" method="post">
+   <div class="form-group" style="">
+     <label for="ID">ID</label>
+     <input type="text" class="form-control" style="width:500px;" name="id" id="id" aria-describedby="helpId" value="<%= results[0].id %>" readonly="true">
+     <label for="ID">Title</label>
+     <input type="text" class="form-control" style="width:500px;" name="title" id="title" aria-describedby="helpId" value="<%= results[0].title %>">
+     <label for="ID">Price</label>
+     <input type="text" class="form-control" style="width:500px;" name="price" id="price" aria-describedby="helpId" value="<%= results[0].price %>">
+     <label for="date">Create At</label>
+     <br>
+     
+    
+     <input id="datepicker" name="create_at" width="276" value="<%= results[0].create_at %>" />
+    <script>
+        $('#datepicker').datepicker({
+            uiLibrary: 'bootstrap4'
+        });
+    </script>
+     
+   </div>
+    <a name="" id="" class="btn btn-secondary" href="db" role="button">Cancel</a>
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a name="" id="" class="btn btn-danger"  href="complete_del/<%= results[0].id %>" role="button">Delete</a>
+    </form>
+  
+
+    </div>
+
+
+<% include ../partials/footer.ejs %>

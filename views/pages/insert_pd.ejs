@@ -1,0 +1,25 @@
+<% include ../partials/header.ejs %>
+<% include ../partials/navbar.ejs %>
+<div class="container">
+    <br>
+    <br>
+    <form action ="complete_add" method = "post" >
+   <div class="form-group" style="">
+     
+     <label for="ID">Title</label>
+     <input type="text" class="form-control" style="width:500px;" name="title" id="title" aria-describedby="helpId" placeholder="">
+     <label for="ID">Price</label>
+     <input type="number" class="form-control" style="width:500px;" name="price" id="price" aria-describedby="helpId" placeholder="">
+     
+     <br>
+   
+     <!--<input name="" id="date" style="width:500px;" class="btn btn-light" type="text" value="" disabled> -->
+   </div>
+    <a name="" id="" class="btn btn-secondary" href="db" role="button">Cancel</a>
+     <button type="submit" class="btn btn-primary">AddNew</button>
+   </form>
+</div>  
+
+
+
+<% include ../partials/footer.ejs %>
